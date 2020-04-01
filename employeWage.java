@@ -34,12 +34,12 @@ public class employeWage implements WageMethod	{
 			totalEmpHrs += empHrs;
 			empDailyWage = empHrs * companyEmployee.getEmpRatePerHour();
 			empDailyAndTotalWage.add( empDailyWage );
-			System.out.println("Day#: " + totalWorkingDays + " Emp Hr: " +  empHrs);
+			//System.out.println("Day#: " + totalWorkingDays + " Emp Hr: " +  empHrs);
 		}
 		empTotalWage = totalEmpHrs * companyEmployee.getEmpRatePerHour();
 		empDailyAndTotalWage.add( empTotalWage );
 		companyEmployee.setTotalEmpWage( empTotalWage );
-		System.out.println("Total Wage of " + companyEmployee.getCompanyName() + " Employee is " + companyEmployee.getTotalEmpWage());
+		//System.out.println("Total Wage of " + companyEmployee.getCompanyName() + " Employee is " + companyEmployee.getTotalEmpWage());
 	}
 
 	//MAIN
@@ -52,7 +52,7 @@ public class employeWage implements WageMethod	{
 		company.add( new CompanyEmpWage( "BRIDGELABZ", 20, 20, 100 ));
 		wage.computeTotalEmpWage(company.get(0));
 
-		company.add( new CompanyEmpWage( "GOOGLE", 30, 20, 70 ));
+		company.add( new CompanyEmpWage( "CAPGEMENI", 30, 20, 70 ));
 		wage.computeTotalEmpWage(company.get(1));
 
 		while( true )	{
@@ -117,5 +117,5 @@ class CompanyEmpWage	{
 
 	public int getTotalEmpWage()  {
 		return totalEmpWage;
-   }
+   	}
 }
